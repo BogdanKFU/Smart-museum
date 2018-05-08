@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Список проекторов</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/expositions.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="header-smart col-xs-12">
+            <h1>Smart museum</h1>
+        </div>
+    </div>
+    <div class="row" role="main">
+        <div class="col-xs-12 col-md-12">
+            <ul class="nav nav-tabs">
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Главная</a></li>
+                <li class="active"><a href="/expositions"><span class="glyphicon glyphicon-th"></span> Экспозиции</a>
+                </li>
+                <li><a href="/videos"><span class="glyphicon glyphicon-film"></span> Видео</a></li>
+                <li><a href="/projector/all"><span class="glyphicon glyphicon-blackboard"></span> Проекторы</a></li>
+                <li><a href="/admin/users/"><span class="glyphicon glyphicon-list-alt"></span> Пользователи</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <b>Личный кабинет</b></a></li>
+            </ul>
+        </div>
+        <div class="page-header col-md-12 col-xs-12">
+            <div class="col-md-11 col-xs-11">
+                <h2><b>Список проекторов по экспозиции №1</b></h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Редактирование</th>
+                    <th>Удаление</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="#">Проектор № 4</a></td>
+                    <td>
+                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>
+                            Редактировать
+                        </button>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="#ModalDelete1" data-toggle="modal"><span
+                                class="glyphicon glyphicon-remove"></span>
+                            Удалить
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">Проектор № 7</a></td>
+                    <td>
+                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>
+                            Редактировать
+                        </button>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="#ModalDelete1" data-toggle="modal"><span
+                                class="glyphicon glyphicon-remove"></span>
+                            Удалить
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="ModalDelete1" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                            </button>
+                            <h4 class="modal-title">Удаление проектора</h4>
+                        </div>
+                        <div class="modal-body">
+                            Вы действительно хотите удалить этот проектор из экспозиции?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default">Да</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Отмена
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

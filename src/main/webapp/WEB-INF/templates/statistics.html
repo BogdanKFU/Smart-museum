@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Статистика проекторов</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/expositions.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="header-smart col-xs-12">
+            <h1>Smart museum</h1>
+        </div>
+    </div>
+    <div class="row" role="main">
+        <div class="col-xs-12 col-md-12">
+            <ul class="nav nav-tabs">
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Главная</a></li>
+                <li><a href="/expositions"><span class="glyphicon glyphicon-th"></span> Экспозиции</a>
+                </li>
+                <li><a href="/videos"><span class="glyphicon glyphicon-film"></span> Видео</a></li>
+                <li class="active"><a href="/projector/all"><span class="glyphicon glyphicon-blackboard"></span>
+                    Проекторы</a></li>
+                <li><a href="/admin/users/"><span class="glyphicon glyphicon-list-alt"></span> Пользователи</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <b>Личный кабинет</b></a></li>
+            </ul>
+        </div>
+        <div class="page-header col-md-12 col-xs-12">
+            <div class="col-md-10 col-xs-10">
+                <h2><b>Статистика работы проекторов</b></h2>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" href="#ModalAdd" data-toggle="modal">
+                        Добавить проектор
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <form role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Найти проектор">
+                    <span class="input-group-btn">
+    	                <button class="btn btn-default" type="button">
+	      	                <i class="glyphicon glyphicon-search"></i>
+                        </button>
+	                </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-12 table">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Название проектора</th>
+                    <th>Экспозиция</th>
+                    <th>Время работы, ч</th>
+                    <th>Состояние</th>
+                    <th>Редактирование</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="attention">
+                    <td><a href="#">Проектор №1</a></td>
+                    <td><a href="#">Экспозиция №5</a></td>
+                    <td>213</td>
+                    <td>Включен</td>
+                    <td>
+                        <button type="button" class="btn btn-info" href="#ModalEdit" data-toggle="modal"><span
+                                class="glyphicon glyphicon-pencil"></span>
+                            Редактировать
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">Проектор №3</a></td>
+                    <td><a href="#">Экспозиция №1</a></td>
+                    <td>45</td>
+                    <td>Выключен</td>
+                    <td>
+                        <button type="button" class="btn btn-info" href="#ModalEdit" data-toggle="modal"><span
+                                class="glyphicon glyphicon-pencil"></span>
+                            Редактировать
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <div id="ModalAdd" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                            </button>
+                            <h4 class="modal-title">Создание нового проектора</h4>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="formControlInput1">Название проектора</label>
+                                    <input type="text" class="form-control" id="formControlInput1"
+                                           placeholder="Например, проектор №1">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="ModalEdit" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                            </button>
+                            <h4 class="modal-title">Создание нового проектора</h4>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="formInp">Редактирование проектора</label>
+                                    <input type="text" class="form-control" id="formInp"
+                                           placeholder="Например, проектор №1" value="Проектор 1">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

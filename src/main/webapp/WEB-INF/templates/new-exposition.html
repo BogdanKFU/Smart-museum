@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Экспозиция</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/expositions.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://bootstraptema.ru/plugins/2015/b-multiselect/bootstrap-multiselect.css"
+          type="text/css">
+    <script type="text/javascript"
+            src="http://bootstraptema.ru/plugins/2015/b-multiselect/bootstrap-multiselect.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="header-smart col-xs-12">
+            <h1>Smart museum</h1>
+        </div>
+    </div>
+    <div class="row" role="main">
+        <div class="col-xs-12 col-md-12">
+            <ul class="nav nav-tabs">
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Главная</a></li>
+                <li class="active"><a href="/expositions"><span class="glyphicon glyphicon-th"></span> Экспозиции</a>
+                </li>
+                <li><a href="/videos"><span class="glyphicon glyphicon-film"></span> Видео</a></li>
+                <li><a href="/projector/all"><span class="glyphicon glyphicon-blackboard"></span> Проекторы</a></li>
+                <li><a href="/admin/users/"><span class="glyphicon glyphicon-list-alt"></span> Пользователи</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <b>Личный кабинет</b></a></li>
+            </ul>
+        </div>
+        <div class="page-header col-md-12 col-xs-12">
+            <div class="col-md-11 col-xs-11">
+                <h2><b>Новая экспозиция</b></h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-offset-1 col-md-10">
+                <h3>Создать новую экспозицию</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="formControlInput1">Название экспозиции</label>
+                        <input type="text" class="form-control" id="formControlInput1"
+                               placeholder="Например, экспозиция №1">
+                    </div>
+                    <div class="form-group">
+                        <label for="boot-multiselect-demo">Выберите проекторы, которые входят в экспозицию</label><br>
+                        <select id="boot-multiselect-demo" multiple="multiple">
+                            <option value="p1">Проектор 1</option>
+                            <option value="p2">Проектор 2</option>
+                            <option value="p3">Проектор 3</option>
+                            <option value="p4">Проектор 4</option>
+                            <option value="p5">Проектор 5</option>
+                            <option value="p6">Проектор 6</option>
+                            <option value="p7">Проектор 7</option>
+                            <option value="p8">Проектор 8</option>
+                            <option value="p9">Проектор 9</option>
+                            <option value="p10">Проектор 10</option>
+                        </select>
+                    </div>
+                    <div class="col-md-offset-10">
+                        <button type="submit" class="btn btn-info btn-lg btn-subm">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#boot-multiselect-demo').multiselect({
+                    includeSelectAllOption: true,
+                    buttonWidth: 400,
+                    dropRight: true,
+                    nonSelectedText: 'Выберите проекторы',
+                    maxHeight: 150
+                });
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>
