@@ -43,7 +43,7 @@
                                     </div>
                                     <div>&nbsp;<@sf.errors path="name" cssClass="help-block-edit-form"/></div>
                                     <div class="input-group input-elem">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>Z
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
                                         <@sf.input path="thirdName" class="form-control" placeholder="Введите отчество" value="${editForm.thirdName!''}"/>
                                     </div>
                                     <div>&nbsp;<@sf.errors path="thirdName" cssClass="help-block-edit-form"/></div>

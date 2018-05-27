@@ -13,7 +13,7 @@
                         <form class="schedule-form" action="/user_statistic" method="get">
                             <div class="row">
                                 <div class="col-md-3 col-xs-3">
-                                    <input type="text" name="searchField" placeholder="Поиск">
+                                    <input class="form-control" type="text" name="searchField" placeholder="Поиск">
                                 </div>
                                 <div class="col-md-3 col-xs-3">
                                     <select multiple class="form-control selectpicker" id="users" name="users" size="6">
