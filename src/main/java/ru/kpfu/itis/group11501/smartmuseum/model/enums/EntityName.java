@@ -9,7 +9,7 @@ public enum EntityName {
     PROJECTORSVIDEOS("ПроеткорВидео",  null),  //not page for individual projector_video; only add
     VIDEO("Видео", null),   //not page for individual video
     PROJECTOR("Проектор", "/projector/"),
-    USER("Пользователь", "/user/");
+    USER("Пользователь", "/admin/users/");
     private final String rusName;
     private final String link;
 
