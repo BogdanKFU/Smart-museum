@@ -12,7 +12,6 @@ import ru.kpfu.itis.group11501.smartmuseum.util.FileUploader;
  */
 
 @Configuration
-@PropertySource("classpath:uploadfile.properties")
 public class FileUploadConfig {
 
     @Autowired
@@ -23,7 +22,6 @@ public class FileUploadConfig {
         FileUploader fileUploader = new FileUploader();
         fileUploader.setVideoPath(env.getProperty("video.path"));
         fileUploader.setImagePath(env.getProperty("image.path"));
-
         return fileUploader;
     }
 

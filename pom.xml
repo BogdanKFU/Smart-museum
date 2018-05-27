@@ -133,9 +133,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.2</version>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
         <!-- Jackson -->
@@ -229,66 +229,6 @@
 
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>db-db.changelog</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.liquibase</groupId>
-                        <artifactId>liquibase-maven-plugin</artifactId>
-                        <version>3.1.0</version>
-                        <executions>
-                            <execution>
-                                <id>default-cli</id>
-                                <phase>process-resources</phase>
-                                <configuration>
-                                    <changeLogFile>${basedir}/src/main/resources/db/changelog.xml
-                                    </changeLogFile>
-                                    <propertyFileWillOverride>false</propertyFileWillOverride>
-                                    <dropFirst>false</dropFirst>
-                                    <propertyFile>${basedir}/src/main/resources/liquibase.properties
-                                    </propertyFile>
-                                </configuration>
-                                <goals>
-                                    <goal>update</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>mock-data</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.liquibase</groupId>
-                        <artifactId>liquibase-maven-plugin</artifactId>
-                        <version>3.1.0</version>
-                        <executions>
-                            <execution>
-                                <id>default-cli</id>
-                                <phase>process-resources</phase>
-                                <configuration>
-                                    <changeLogFile>${basedir}/src/main/resources/db/mock_data.xml
-                                    </changeLogFile>
-                                    <propertyFileWillOverride>false</propertyFileWillOverride>
-                                    <dropFirst>false</dropFirst>
-                                    <propertyFile>${basedir}/src/main/resources/liquibase.properties
-                                    </propertyFile>
-                                </configuration>
-                                <goals>
-                                    <goal>update</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
     <build>
         <plugins>
@@ -309,33 +249,6 @@
                 <version>3.0.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>3.5.3</version>
-                <configuration>
-                    <changeLogFile>${basedir}/src/main/resources/db/changelog.xml</changeLogFile>
-                    <propertyFileWillOverride>false</propertyFileWillOverride>
-                    <dropFirst>false</dropFirst>
-                    <propertyFile>${basedir}/src/main/resources/liquibase.properties</propertyFile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>update</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <configuration>
                     <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
                     <webResources>
                         <resource>
@@ -351,6 +264,31 @@
                     </webResources>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.github.jsimone</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>8.5.30.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

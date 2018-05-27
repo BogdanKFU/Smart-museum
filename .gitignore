@@ -1,6 +1,7 @@
 .idea
 *.iml
 target
-**/*.properties
+**/persistence.properties
+**/uploadfile.properties
 out
 loadFiles
