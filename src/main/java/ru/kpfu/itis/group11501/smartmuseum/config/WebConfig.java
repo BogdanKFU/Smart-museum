@@ -18,7 +18,6 @@ import java.util.Properties;
 @Configuration
 @EnableWebMvc
 @ComponentScan("ru.kpfu.itis.group11501.smartmuseum")
-@PropertySource("classpath:uploadfile.properties")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
