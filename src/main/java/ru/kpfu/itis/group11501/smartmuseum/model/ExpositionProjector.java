@@ -9,8 +9,7 @@ import javax.persistence.*;
 public class ExpositionProjector implements GettingId {
 
     @Id
-    @SequenceGenerator(name = "EXPOSITION_PROJECTOR_SEQ", sequenceName = "expositions_projectors_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "EXPOSITION_PROJECTOR_SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(targetEntity = Projector.class)

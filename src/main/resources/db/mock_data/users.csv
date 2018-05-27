@@ -1,6 +1,6 @@
-﻿id,login,password,name,surname,third_name,photo,status,rolesid,positionsid,block_date
-1,admin,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Администратор,Администратор,"","",t,2,1,null
-2,ivanov,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Иван,Иванов,Александрович,"",t,3,1,null
-3,petrov,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Евгений,Петров,Владимирович,"",t,1,2,null
-4,basargina,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Светлана,Басаргина,Юрьевна,"",t,1,1,null
-5,malikov,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Дамир,Маликов,"","",f,1,2,3018-05-26 15:58:32.133
+﻿login,password,name,surname,third_name,photo,status,rolesid,positionsid,block_date
+admin,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Администратор,Администратор,"","",t,2,1,null
+ivanov,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Иван,Иванов,Александрович,"",t,3,1,null
+petrov,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Евгений,Петров,Владимирович,"",t,1,2,null
+basargina,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Светлана,Басаргина,Юрьевна,"",t,1,1,null
+malikov,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Дамир,Маликов,"","",f,1,2,3018-05-26 15:58:32.133

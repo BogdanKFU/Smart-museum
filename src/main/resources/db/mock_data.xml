@@ -32,12 +32,6 @@
         </loadUpdateData>
     </changeSet>
 
-    <changeSet id="mock_data_6" author="volkov">
-        <loadUpdateData tableName="action_types" primaryKey="id" file="db/mock_data/actiontypes2.csv">
-            <column name="id" type="numeric"/>
-        </loadUpdateData>
-    </changeSet>
-
     <changeSet id="mock_data_7" author="volkov">
         <loadUpdateData tableName="week_days" primaryKey="id" file="db/mock_data/weekDays.csv">
             <column name="id" type="numeric"/>

@@ -16,8 +16,7 @@ public class PlayingSchedule implements GettingId {
 
 
     @Id
-    @SequenceGenerator(name = "PLAYING_SCHEDULE_SEQ", sequenceName = "playing_schedule_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PLAYING_SCHEDULE_SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     public PlayingSchedule(Date beginTime, Date endTime, WeekDay weekDay, Projector projector) {

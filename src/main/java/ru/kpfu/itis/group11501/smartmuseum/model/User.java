@@ -19,8 +19,7 @@ import java.util.Date;
 public class User implements UserDetails, GettingId{
 
     @Id
-    @SequenceGenerator(name = "USER_SEQ", sequenceName = "users_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 

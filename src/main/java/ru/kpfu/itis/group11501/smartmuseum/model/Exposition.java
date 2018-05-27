@@ -13,8 +13,7 @@ import java.util.List;
 public class Exposition implements GettingId {
 
     @Id
-    @SequenceGenerator(name = "EXPOSITION_SEQ", sequenceName = "expositions_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "EXPOSITION_SEQ")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column( nullable = false , unique = true)
