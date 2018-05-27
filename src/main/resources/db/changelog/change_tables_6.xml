@@ -10,9 +10,9 @@
                         cycle="false"
                         incrementBy="1"
                         maxValue="10000"
-                        minValue="3"
+                        minValue="6"
                         schemaName="public"
                         sequenceName="users_seq"
-                        startValue="4"/>
+                        startValue="6"/>
     </changeSet>
 </databaseChangeLog>

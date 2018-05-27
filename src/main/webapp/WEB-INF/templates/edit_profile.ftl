@@ -51,7 +51,7 @@
                                         <div class="input-group input-elem" style="width: 100%">
                                                 <div class="row">
                                                     <#if positions?has_content>
-                                                        <div style="text-align: left" class="col-md-4 col-xs-4">Позиция: </div>
+                                                        <div style="text-align: left" class="col-md-4 col-xs-4">Должность: </div>
                                                         <div class="col-md-8 col-xs-8">
                                                             <select class="form-control selectpicker" name="position">
                                                                 <#list positions as position>

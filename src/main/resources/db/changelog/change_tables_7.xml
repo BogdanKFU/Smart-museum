@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="270520181657_1" author="popov">
+        <createSequence catalogName="projectors"
+                        cycle="false"
+                        incrementBy="1"
+                        maxValue="100000"
+                        minValue="9"
+                        schemaName="public"
+                        sequenceName="projectors_seq"
+                        startValue="9"/>
+    </changeSet>
+    <changeSet id="270520181657_2" author="popov">
+        <createSequence catalogName="expositions"
+                        cycle="false"
+                        incrementBy="1"
+                        maxValue="100000"
+                        minValue="5"
+                        schemaName="public"
+                        sequenceName="expositions_seq"
+                        startValue="5"/>
+    </changeSet>
+    <changeSet id="270520181657_3" author="popov">
+        <createSequence catalogName="expositions_projectors"
+                        cycle="false"
+                        incrementBy="1"
+                        maxValue="1000000"
+                        minValue="8"
+                        schemaName="public"
+                        sequenceName="expositions_projectors_seq"
+                        startValue="8"/>
+    </changeSet>
+    <changeSet id="270520181657_4" author="popov">
+        <createSequence catalogName="playing_schedule"
+                        cycle="false"
+                        incrementBy="1"
+                        maxValue="1000000"
+                        minValue="23"
+                        schemaName="public"
+                        sequenceName="playing_schedule_seq"
+                        startValue="23"/>
+    </changeSet>
+</databaseChangeLog>

@@ -7,17 +7,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "expositions_projectors")
 public class ExpositionProjector implements GettingId {
-    public ExpositionProjector() {
-
-    }
-
-    public ExpositionProjector(Projector projector, Exposition exposition) {
-        this.projector = projector;
-        this.exposition = exposition;
-    }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "EXPOSITION_PROJECTOR_SEQ", sequenceName = "expositions_projectors_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "EXPOSITION_PROJECTOR_SEQ")
     private Long id;
 
     @ManyToOne(targetEntity = Projector.class)
@@ -27,6 +20,15 @@ public class ExpositionProjector implements GettingId {
     @ManyToOne(targetEntity = Exposition.class)
     @JoinColumn(name = "expositionsid", referencedColumnName = "id")
     private Exposition exposition;
+
+    public ExpositionProjector() {
+
+    }
+
+    public ExpositionProjector(Projector projector, Exposition exposition) {
+        this.projector = projector;
+        this.exposition = exposition;
+    }
 
     public Long getId() {
         return id;

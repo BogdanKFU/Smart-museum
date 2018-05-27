@@ -13,7 +13,8 @@ import java.util.List;
 public class Exposition implements GettingId {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "EXPOSITION_SEQ", sequenceName = "expositions_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "EXPOSITION_SEQ")
     private Long id;
 
     @Column( nullable = false , unique = true)
@@ -30,9 +31,8 @@ public class Exposition implements GettingId {
     public Exposition() {
     }
 
-    public Exposition(String name, List<Projector> projectors) {
+    public Exposition(String name) {
         this.name = name;
-        this.projectors = projectors;
     }
 
     public Long getId() {

@@ -1,9 +1,9 @@
-id,name,sum_time,status,video_time,current_video
-7,Проектор 2,480965,D,null,null
-13,Проектор 8,2859957,E,null,null
-11,Проектор 6,3102387,E,null,null
-10,Проектор 5,0,E,null,null
-8,Проектор 3,0,D,null,null
-9,Проектор 4,0,F,null,null
-12,Проектор 7,0,E,null,null
-6,Проектор 1,0,E,null,null
+﻿id,name,sum_time,status,video_time,current_video
+1,Проектор 1,480965,D,null,null
+2,Проектор 2,2859957,E,null,null
+3,Проектор 3,3102387,E,null,null
+4,Проектор 4,0,E,null,null
+5,Проектор 5,0,D,null,null
+6,Проектор 6,0,F,null,null
+7,Проектор 7,0,E,null,null
+8,Проектор 8,0,E,null,null

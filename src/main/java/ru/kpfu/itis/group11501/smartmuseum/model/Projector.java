@@ -20,7 +20,8 @@ public class Projector implements GettingId {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "PROJECTOR_SEQ", sequenceName = "projectors_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PROJECTOR_SEQ")
     private Long id;
 
 

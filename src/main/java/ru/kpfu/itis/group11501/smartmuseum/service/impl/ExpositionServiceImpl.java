@@ -55,7 +55,11 @@ public class ExpositionServiceImpl implements ExpositionService {
         for (String id : projectorsId) {
             projectors.add(projectorService.getOneById(Long.valueOf(id.trim())));
         }
-        return expositionRepository.save(new Exposition(name, projectors));
+        Exposition exposition = expositionRepository.save(new Exposition(name));
+        for (Projector projector : projectors) {
+            expositionProjectorRepository.save(new ExpositionProjector(projector, exposition));
+        }
+        return exposition;
     }
 
     @Override
@@ -74,12 +78,15 @@ public class ExpositionServiceImpl implements ExpositionService {
             }
         }
         projectors.removeAll(willDelete);
+        List<Projector> newProjectorList = new ArrayList<>();
         if (newProjectors != null) {
             for (String projector : newProjectors) {
-                projectors.add(projectorService.getOneById(Long.valueOf(projector)));
+                Projector newProjector = projectorService.getOneById(Long.valueOf(projector));
+                newProjectorList.add(newProjector);
+                projectors.add(newProjector);
             }
         }
-        exposition.setProjectors(projectors);
+        exposition.setProjectors(newProjectorList);
         if (exposition.getProjectors().size() == 0) {
             expositionRepository.delete(exposition);
         } else {
@@ -90,7 +97,10 @@ public class ExpositionServiceImpl implements ExpositionService {
     @Override
     @Action(name = ActionTypeName.UPDATE)
     public void editExposition(Exposition exposition) {
-        expositionRepository.save(exposition);
+        List<Projector> projectors = exposition.getProjectors();
+        for (Projector projector : projectors) {
+            expositionProjectorRepository.save(new ExpositionProjector(projector, exposition));
+        }
     }
 
     @Override

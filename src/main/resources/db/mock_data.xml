@@ -51,36 +51,16 @@
     </changeSet>
 
     <changeSet id="mock_data_9" author="korgutlova">
-        <loadUpdateData tableName="projectors_statistics" primaryKey="id" file="db/mock_data/projectors_statistics.csv">
-            <column name="id" type="numeric"/>
-        </loadUpdateData>
-    </changeSet>
-    <changeSet id="mock_data_10" author="korgutlova">
-        <loadUpdateData tableName="videos" primaryKey="id" file="db/mock_data/videos.csv">
-            <column name="id" type="numeric"/>
-        </loadUpdateData>
-    </changeSet>
-    <changeSet id="mock_data_11" author="korgutlova">
-        <loadUpdateData tableName="projectors_videos" primaryKey="id" file="db/mock_data/projectors_videos.csv">
-            <column name="id" type="numeric"/>
-        </loadUpdateData>
-    </changeSet>
-    <changeSet id="mock_data_12" author="korgutlova">
-        <loadUpdateData tableName="users_statistics" primaryKey="id" file="db/mock_data/users_statistics.csv">
-            <column name="id" type="numeric"/>
-        </loadUpdateData>
-    </changeSet>
-    <changeSet id="mock_data_13" author="korgutlova">
         <loadUpdateData tableName="expositions" primaryKey="id" file="db/mock_data/expositions.csv">
             <column name="id" type="numeric"/>
         </loadUpdateData>
     </changeSet>
-    <changeSet id="mock_data_14" author="korgutlova">
+    <changeSet id="mock_data_10" author="korgutlova">
         <loadUpdateData tableName="expositions_projectors" primaryKey="id" file="db/mock_data/expositions_projectors.csv">
             <column name="id" type="numeric"/>
         </loadUpdateData>
     </changeSet>
-    <changeSet id="mock_data_15" author="korgutlova">
+    <changeSet id="mock_data_11" author="korgutlova">
         <loadUpdateData tableName="playing_schedule" primaryKey="id" file="db/mock_data/playing_schedule.csv">
             <column name="id" type="numeric"/>
         </loadUpdateData>
