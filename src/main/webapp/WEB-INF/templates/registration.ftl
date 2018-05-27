@@ -15,26 +15,22 @@
 
                         <div class="input-group input-elem">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-
-                            <div class="form-group col-12"><@sf.input path="login" type="text" class="form-control" placeholder="Введите логин" value="${u.login!''}"/></div>
+                            <@sf.input path="login" type="text" class="form-control" placeholder="Введите логин" value="${u.login!''}"/>
                         </div>
                         <div>&nbsp;<@sf.errors path="login" cssClass="help-block-edit-form"/></div>
                         <div class="input-group input-elem">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
-
-                            <div class="form-group col-12"><@sf.input path="surName" type="text" class="form-control" placeholder="Введите фамилию" value="${u.surName!''}"/></div>
+                            <@sf.input path="surName" type="text" class="form-control" placeholder="Введите фамилию" value="${u.surName!''}"/>
                         </div>
                         <div>&nbsp;<@sf.errors path="surName" cssClass="help-block-edit-form"/></div>
                         <div class="input-group input-elem">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
-
-                            <div class="form-group col-12"><@sf.input path="name" class="form-control" type="text" placeholder="Введите имя" value="${u.name!''}"/></div>
+                            <@sf.input path="name" class="form-control" type="text" placeholder="Введите имя" value="${u.name!''}"/>
                         </div>
                         <div>&nbsp;<@sf.errors path="name" cssClass="help-block-edit-form"/></div>
                         <div class="input-group input-elem">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
-
-                            <div class="form-group col-12"><@sf.input path="thirdName" class="form-control" placeholder="Введите отчество" value="${u.thirdName!''}"/></div>
+                            <@sf.input path="thirdName" class="form-control" placeholder="Введите отчество" value="${u.thirdName!''}"/></div>
                         </div>
                         <div>&nbsp;<@sf.errors path="thirdName" cssClass="help-block-edit-form"/></div>
                         <div class="input-group input-elem">

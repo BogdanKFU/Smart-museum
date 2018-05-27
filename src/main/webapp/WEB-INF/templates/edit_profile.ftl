@@ -33,18 +33,18 @@
                                 <div class="col-md-6 profile-info form-group" style="margin-top: -15px">
                                     <div><@sf.input path="id" type="text"  value="${editForm.id}" hidden="true"/></div>
                                     <div class="input-group input-elem">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-list"></span></span>
-                                        <div class="form-group col-12"><@sf.input path="surname" type="text" class="form-control" placeholder="Введите фамилию" value="${editForm.surname}"/></div>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
+                                        <@sf.input path="surname" type="text" class="form-control" placeholder="Введите фамилию" value="${editForm.surname}"/>
                                     </div>
                                     <div>&nbsp;<@sf.errors path="surname" cssClass="help-block-edit-form"/></div>
                                     <div class="input-group input-elem">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-list"></span></span>
-                                        <div class="form-group col-12"><@sf.input path="name" class="form-control" type="text" placeholder="Введите имя" value="${editForm.name}"/></div>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>
+                                        <@sf.input path="name" class="form-control" type="text" placeholder="Введите имя" value="${editForm.name}"/>
                                     </div>
                                     <div>&nbsp;<@sf.errors path="name" cssClass="help-block-edit-form"/></div>
                                     <div class="input-group input-elem">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-list"></span></span>
-                                        <div class="form-group col-12"><@sf.input path="thirdName" class="form-control" placeholder="Введите отчество" value="${editForm.thirdName!''}"/></div>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-ok-circle"></span></span>Z
+                                        <@sf.input path="thirdName" class="form-control" placeholder="Введите отчество" value="${editForm.thirdName!''}"/>
                                     </div>
                                     <div>&nbsp;<@sf.errors path="thirdName" cssClass="help-block-edit-form"/></div>
                                     <#if u.role.name == "ADMIN">
