@@ -1,9 +1,9 @@
 ﻿name,sum_time,status,video_time,current_video
 Проектор 1,480965,D,null,null
-Проектор 2,2859957,E,null,null
-Проектор 3,3102387,E,null,null
-Проектор 4,0,E,null,null
+Проектор 2,2859957,D,null,null
+Проектор 3,3102387,D,null,null
+Проектор 4,0,D,null,null
 Проектор 5,0,D,null,null
-Проектор 6,0,F,null,null
-Проектор 7,0,E,null,null
-Проектор 8,0,E,null,null
+Проектор 6,0,D,null,null
+Проектор 7,0,D,null,null
+Проектор 8,0,D,null,null
