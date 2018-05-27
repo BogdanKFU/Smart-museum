@@ -1,3 +1,0 @@
-ID,LOGIN,PASSWORD,NAME,SURNAME,THIRD_NAME,PHOTO,STATUS,ROLESID,POSITIONSID,BLOCK_DATE
-2,bogdan,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Богдан,Попов,,"",t,1,1,null
-3,damir,$2a$10$vq/J9ZNGZy9dLoe3epovNe.etUvEzbE8qPib2snddSXyk4JzD1zYW,Дамир,Серазетдинов,,"",t,3,1,null
