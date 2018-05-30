@@ -11,7 +11,7 @@
 
         <div class="col-xs-12 col-sm-4 text">
 <#if u.photo?has_content>
-    <div><img class="user-photo" src="/image/${u.photo!}"></div>
+    <div><img class="user-photo" src="/image/${u.photo!}" onerror="this.src='/resources/static/img/image_unavailable.jpg'"></div>
     <#else>
             <div><img src="/resources/static/img/image_unavailable.jpg" class="img-responsive img-circle center-block"></div>
     </#if>

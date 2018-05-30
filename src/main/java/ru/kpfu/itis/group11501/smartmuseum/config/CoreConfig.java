@@ -16,8 +16,8 @@ public class CoreConfig {
     static class Heroku{}
 
     @Configuration
-    @Profile("default")
-    @PropertySource(value = {"classpath:persistence.properties", "classpath:uploadfile.properties"}, ignoreResourceNotFound = true)
+    @Profile("!heroku")
+    @PropertySource(value = {"classpath:persistence.properties", "classpath:uploadfile.properties"})
     static class Defaults{}
 
 }

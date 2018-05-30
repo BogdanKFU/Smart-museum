@@ -75,6 +75,7 @@ public class UserController {
     public String postEditProfile(@ModelAttribute("editForm") @Valid EditProfileForm editProfileForm,
                                   BindingResult bindingResult,
                                   RedirectAttributes redirectAttributes) {
+        editProfileForm.setId(Helpers.getCurrentUser().getId());
         editProfileFormValidator.validate(editProfileForm, bindingResult);
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.editForm", bindingResult);
@@ -133,6 +134,7 @@ public class UserController {
                                        @ModelAttribute("editForm") @Valid AdminEditProfileForm editProfileForm,
                                        BindingResult bindingResult,
                                        RedirectAttributes redirectAttributes) {
+        editProfileForm.setId(id);
         editProfileFormValidator.validate(editProfileForm, bindingResult);
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.editForm", bindingResult);

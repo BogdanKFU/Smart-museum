@@ -28,8 +28,12 @@ public class FileController {
 
     @ResponseBody
     @RequestMapping(value = "/image/{name}.{extension}", method = RequestMethod.GET)
-    public byte[] getImage(@PathVariable(value = "name") String name, @PathVariable(value = "extension") String extension) throws IOException {
+    public byte[] getImage(@PathVariable(value = "name") String name, @PathVariable(value = "extension") String extension)  {
         File image = new File(fileUploader.getImagePath() + name + "." + extension);
-        return Files.readAllBytes(image.toPath());
+        try {
+            return Files.readAllBytes(image.toPath());
+        } catch (IOException e) {
+            return null;
+        }
     }
 }
